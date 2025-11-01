@@ -1,0 +1,26 @@
+# manifest of copilot instruction files
+files:
+    - path: .github/copilot-instructions/copilot-instructions.global.md
+      scope: global
+      tags: [style, commit, pr]
+      priority: 10
+      applies_to: ["*"]
+      version: "1.0.0"
+    - path: .github/copilot-instructions/copilot-instructions.python.md
+      scope: python
+      tags: [style, typing, lint]
+      priority: 20
+      applies_to: ["**/*.py", "pyproject.toml"]
+      version: "0.2.0"
+    - path: .github/copilot-instructions/copilot-instructions.django.md
+      scope: django
+      tags: [framework, django, db]
+      priority: 30
+      applies_to: ["**/manage.py", "**/requirements.txt"]
+      version: "0.1.0"
+    - path: .github/copilot-instructions/copilot-instructions.cues.md
+      scope: project
+      tags: [project-specific]
+      priority: 40
+      applies_to: ["cues/**"]
+      version: "0.1.0"
