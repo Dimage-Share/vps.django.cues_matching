@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+ 
+ 
+[Service]
+User=knebuka
+Group=www-data
+WorkingDirectory=/home/knebuka/vps.django.cues_matching/cues
+ExecStart=/home/knebuka/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/knebuka/vps.django.cues_matching/cues/cues.sock cues.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

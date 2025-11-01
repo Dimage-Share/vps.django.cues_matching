@@ -1,0 +1,1 @@
+sudo ln -s /etc/nginx/sites-available/cues /etc/nginx/sites-enabled/
